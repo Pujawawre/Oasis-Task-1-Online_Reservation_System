@@ -29,7 +29,7 @@ The Online Reservation System is a Java-based system that allows users to book, 
 🖇️How to Run the Project:
 1. Clone this repository:
 
-git clone https://[github.com/Pujawawre/Oasis-Task-1-online-reservation-system]
+git clone (https://github.com/Pujawawre/Oasis-Task-1-Online_Reservation_System)
 
 2. Open the project in your favorite IDE (e.g., IntelliJ IDEA, Eclipse or Visual Studio Code).
 
