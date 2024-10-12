@@ -1,0 +1,47 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+class ReservationSystem {
+   private List<Reservation> reservations = new ArrayList();
+   private int nextId = 1;
+
+   ReservationSystem() {
+   }
+
+   public Reservation makeReservation(String var1, String var2, int var3) {
+      Reservation var4 = new Reservation(this.nextId++, var1, var2, var3);
+      this.reservations.add(var4);
+      return var4;
+   }
+
+   public List<Reservation> getReservations() {
+      return this.reservations;
+   }
+
+   public Reservation getReservationById(int var1) {
+      Iterator var2 = this.reservations.iterator();
+
+      Reservation var3;
+      do {
+         if (!var2.hasNext()) {
+            return null;
+         }
+
+         var3 = (Reservation)var2.next();
+      } while(var3.getId() != var1);
+
+      return var3;
+   }
+
+   public boolean cancelReservation(int var1) {
+      Reservation var2 = this.getReservationById(var1);
+      if (var2 != null) {
+         this.reservations.remove(var2);
+         return true;
+      } else {
+         return false;
+      }
+   }
+}
